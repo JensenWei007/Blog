@@ -1,0 +1,14 @@
+[
+  {
+    "id": 0,
+    "title": "我的文章标题",
+    "date": "7 July, 2026",
+    "dateLink": "../archive/2026/7/2026-7.html",
+    "category": "技术教程",
+    "categoryLink": "0.html",
+    "description": "这是一篇示例文章，用于测试归档生成脚本",
+    "link": "../archive/2026/7/7/0/0.html",
+    "image": "",
+    "imageAlt": ""
+  }
+]

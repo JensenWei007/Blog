@@ -27,3 +27,11 @@ cp -rf ~/Blog/* ./
 ```
 
 ### 设置定时更新任务
+
+
+```
+python3 scripts/archive/main.py                   # 更新模式
+python3 scripts/archive/main.py new_post.md       # 新增文章
+python3 scripts/archive/main.py --dry-run          # 预览
+python3 scripts/archive/main.py --id 2             # 指定条目
+```

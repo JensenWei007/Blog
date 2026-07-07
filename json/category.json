@@ -1,0 +1,20 @@
+[
+  {
+    "id": 0,
+    "name": "技术教程",
+    "post_count": 1,
+    "link": "category/0.html"
+  },
+  {
+    "id": 1,
+    "name": "未分类",
+    "post_count": 1,
+    "link": "category/1.html"
+  },
+  {
+    "id": 2,
+    "name": "生活随笔",
+    "post_count": 1,
+    "link": "category/2.html"
+  }
+]

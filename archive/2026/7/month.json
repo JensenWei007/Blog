@@ -3,33 +3,36 @@
     "id": 0,
     "title": "我的文章标题",
     "date": "7 July, 2026",
-    "dateLink": "archive/2026/7/2026-7.html",
+    "dateLink": "2026-7.html",
     "category": "技术教程",
-    "categoryLink": "category/0.html",
+    "categoryLink": "../../../category/0.html",
     "description": "这是一篇示例文章，用于测试归档生成脚本",
-    "link": "archive/2026/7/7/0/0.html",
-    "source": "md/0.md"
+    "link": "7/0/0.html",
+    "image": "",
+    "imageAlt": ""
   },
   {
     "id": 1,
     "title": "一篇新的测试文章",
     "date": "6 July, 2026",
-    "dateLink": "archive/2026/7/2026-7.html",
+    "dateLink": "2026-7.html",
     "category": "生活随笔",
-    "categoryLink": "category/2.html",
+    "categoryLink": "../../../category/2.html",
     "description": "这是通过新增模式添加的测试文章",
-    "link": "archive/2026/7/6/1/1.html",
-    "source": "md/1.md"
+    "link": "6/1/1.html",
+    "image": "",
+    "imageAlt": ""
   },
   {
     "id": 2,
     "title": "我的文章标题111",
     "date": "8 July, 2026",
+    "dateLink": "2026-7.html",
     "category": "未分类",
+    "categoryLink": "../../../category/1.html",
     "description": "这是一篇示例文章，用于测试归档生成脚本",
-    "source": "md/2.md",
-    "link": "archive/2026/7/8/2/2.html",
-    "dateLink": "archive/2026/7/2026-7.html",
-    "categoryLink": "category/1.html"
+    "link": "8/2/2.html",
+    "image": "",
+    "imageAlt": ""
   }
 ]

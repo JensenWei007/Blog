@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Category</title>
+    <title>一篇新的测试文章</title>
 
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,15 +11,15 @@
 
     <!-- ** Plugins Needed for the Project ** -->
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="plugins/fontawesome/css/all.css">
+    <link rel="stylesheet" href="../../../../../plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../../plugins/fontawesome/css/all.css">
 
     <!-- Main Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="../../../../../css/style.css" rel="stylesheet">
 
     <!--Favicon-->
-    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../../../../../images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="../../../../../images/favicon.png" type="image/x-icon">
 
 </head>
 <body>
@@ -30,34 +30,34 @@
         </div>
     </div>
     <!-- END preloader-wrapper -->
-
+    
     <!-- START main-wrapper -->
     <section class="d-flex">
 
 <!-- start of sidenav -->
 <aside><div class="sidenav position-sticky d-flex flex-column justify-content-between">
-    <a class="navbar-brand" href="index.html" class="logo">
-        <img src="images/logo.png" alt="">
+    <a class="navbar-brand" href="../../../../../index.html" class="logo">
+        <img src="../../../../../images/logo.png" alt="">
     </a>
     <!-- end of navbar-brand -->
 
     <div class="navbar navbar-dark my-4 p-0 font-primary">
         <ul class="navbar-nav w-100">
             <li class="nav-item ">
-                <a class="nav-link text-white px-0 pt-0" href="index.html">Home</a>
+                <a class="nav-link text-white px-0 pt-0" href="../../../../../index.html">Home</a>
             </li>
             <li class="nav-item ">
-                <a class="nav-link text-white px-0" href="about.html">About</a>
+                <a class="nav-link text-white px-0" href="../../../../../about.html">About</a>
             </li>
             <li class="nav-item ">
-                <a class="nav-link text-white px-0" href="contact.html">Contact</a>
+                <a class="nav-link text-white px-0" href="../../../../../contact.html">Contact</a>
             </li>
             <li class="nav-item active accordion">
                 <div id="drop-menu" class="drop-menu collapse">
-                    <a class="d-block " href="index-2.html">Home 2</a>
-                    <a class="d-block active" href="category.html">Category</a>
-                    <a class="d-block " href="post-details.html">Post Details</a>
-                    <a class="d-block " href="privacy.html">Privacy &amp; Policy</a>
+                    <a class="d-block " href="../../../../../index-2.html">Home 2</a>
+                    <a class="d-block " href="../../../../../category.html">Category</a>
+                    <a class="d-block active" href="../../../../../post-details.html">Post Details</a>
+                    <a class="d-block " href="../../../../../privacy.html">Privacy &amp; Policy</a>
                 </div>
                 <a class="nav-link text-white" href="#!" role="button" data-toggle="collapse" data-target="#drop-menu" aria-expanded="false" aria-controls="drop-menu">Pages</a>
             </li>
@@ -102,8 +102,8 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-6">
-                <a href="index.html">
-                    <img src="images/logo.png" alt="">
+                <a href="../../../../../index.html">
+                    <img src="../../../../../images/logo.png" alt="">
                 </a>
             </div>
             <div class="col-6 text-right">
@@ -118,21 +118,39 @@
 <!-- end of mobile-nav -->
 
             <div class="container py-4 my-5">
+                <div class="row">
+    <div class="col-lg-5 col-md-8">
+        <form class="search-form" action="#">
+            <div class="input-group">
+                <input type="search" class="form-control bg-transparent shadow-none rounded-0" placeholder="Search here">
+                <div class="input-group-append">
+                    <button class="btn" type="submit">
+                        <span class="fas fa-search"></span>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+                
                 <div class="row justify-content-between">
                     <div class="col-lg-10">
-                        <div id="category-main-container">
-                            <div class="text-center text-white py-5">
-                                <div class="spinner-border text-primary" role="status">
-                                    <span class="sr-only">Loading...</span>
-                                </div>
-                                <p class="mt-3">正在加载分类...</p>
-                            </div>
+                        
+                        <h1 class="text-white add-letter-space mt-4">一篇新的测试文章</h1>
+                        <ul class="post-meta mt-3 mb-4"><li class="d-inline-block mr-3"><span class="fas fa-clock text-primary"></span><a class="ml-1" href="../../../../../archive/2026/7/2026-7.html">6 July, 2026</a></li><li class="d-inline-block"><span class="fas fa-list-alt text-primary"></span><a class="ml-1" href="../../../../../category/2.html">生活随笔</a></li></ul>
+                        <div class="post-content mt-4">
+                            <h1 id="_1">欢迎来到我的博客</h1>
+<p>这是第二篇文章。</p>
+<h2 id="_2">关于生活</h2>
+<p>生活总是充满惊喜。</p>
+<pre class="codehilite"><code class="language-javascript">console.log(&quot;Hello Blog!&quot;);
+</code></pre>
                         </div>
                     </div>
                 </div>
             </div>
 
-        <!-- start of footer -->
+            <!-- start of footer -->
 <footer class="bg-dark">
     <div class="container">
         <div class="row text-center">
@@ -176,17 +194,16 @@
     </div>
 </footer>
 <!-- end of footer -->
-    </div>
-
-    </section>
+        </div>
+    
+        </section>
     <!-- END main-wrapper -->
 
     <!-- All JS Files -->
-    <script src="plugins/jQuery/jquery.min.js"></script>
-    <script src="plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="../../../../../plugins/jQuery/jquery.min.js"></script>
+    <script src="../../../../../plugins/bootstrap/bootstrap.min.js"></script>
 
     <!-- Main Script -->
-    <script src="js/script.js"></script>
-    <script src="js/load_category_main.js"></script>
+    <script src="../../../../../js/script.js"></script>
 </body>
 </html>

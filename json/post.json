@@ -5,10 +5,7 @@
         "dateLink": "archive.html",
         "category": "Photography",
         "categoryLink": "category.html",
-        "link": "post-details.html",
-        "image": "images/post/post-sm/01.png",
-        "imageLink": "to.html",
-        "imageAlt": "文章配图"
+        "link": "post-details.html"
     },
     {
         "title": "第二篇文章标题",
