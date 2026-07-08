@@ -1,5 +1,5 @@
 // load_archive_root.js
-// 归档根页面：显示所有年份及月份概览
+// 归档根页面：以圆角矩形卡片显示各年份及月份
 async function loadArchiveRoot() {
     const container = document.getElementById('archive-root-container');
     if (!container) {
@@ -24,33 +24,36 @@ async function loadArchiveRoot() {
 }
 
 function generateArchiveRootHTML(data) {
-    // 按年份倒序
     const years = [...data.years].sort((a, b) => b.year - a.year);
 
-    const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-                        'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const monthNames = ['一月', '二月', '三月', '四月', '五月', '六月',
+                        '七月', '八月', '九月', '十月', '十一月', '十二月'];
 
     return years.map(yearData => {
-        const months = [...yearData.months].sort((a, b) => b - a);
-        const monthBadges = months.map(m => {
-            return `<a href="${yearData.year}/${m}/${yearData.year}-${m}.html"
-                        class="badge badge-pill bg-dark text-white mr-2 mb-2 px-3 py-2"
-                        style="font-size:0.9rem; border:1px solid #444;">
-                        ${monthNames[m - 1]}
-                    </a>`;
-        }).join('');
+        const months = [...yearData.months].sort((a, b) => b.month - a.month);
+        const monthBlocks = months.map(m => `
+            <a href="${yearData.year}/${m.month}/${yearData.year}-${m.month}.html"
+               style="display:inline-block; background:#2a2930; color:#ccc;
+                      padding:10px 22px; margin:5px 8px 5px 0;
+                      border-radius:8px; font-size:1.05rem;
+                      text-decoration:none; transition:all 0.2s;"
+               onmouseover="this.style.background='#E4112F';this.style.color='#fff'"
+               onmouseout="this.style.background='#2a2930';this.style.color='#ccc'">
+                ${monthNames[m.month - 1]}
+            </a>
+        `).join('');
 
         return `
-            <div class="archive-year-block mb-5">
-                <h2 class="text-white add-letter-space mb-3">
-                    <a href="${yearData.year}/${yearData.year}.html" class="text-white opacity-75-onHover">
+            <div style="background:#1D1C21; border-radius:16px; padding:24px 28px; margin-bottom:24px;">
+                <h1 class="text-white add-letter-space" style="margin:0 0 18px 0;">
+                    <a href="${yearData.year}/${yearData.year}.html"
+                       style="color:#fff; text-decoration:none;"
+                       onmouseover="this.style.color='#E4112F'"
+                       onmouseout="this.style.color='#fff'">
                         ${yearData.year}
                     </a>
-                    <span class="text-muted ml-3" style="font-size:0.8rem;">
-                        ${yearData.post_count} 篇文章
-                    </span>
-                </h2>
-                <div class="d-flex flex-wrap">${monthBadges}</div>
+                </h1>
+                <div style="line-height:1.8;">${monthBlocks}</div>
             </div>
         `;
     }).join('');

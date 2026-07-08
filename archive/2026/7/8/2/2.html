@@ -83,34 +83,18 @@
             <!-- end of mobile-nav -->
 
             <div class="container py-4 my-5">
-                <div class="row">
-                    <div class="col-lg-5 col-md-8">
-                        <form class="search-form" action="#">
-                            <div class="input-group">
-                                <input type="search" class="form-control bg-transparent shadow-none rounded-0" placeholder="Search here">
-                                <div class="input-group-append">
-                                    <button class="btn" type="submit">
-                                        <span class="fas fa-search"></span>
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                
                 <div class="row justify-content-between">
                     <div class="col-lg-10">
                         
                         <h1 class="text-white add-letter-space mt-4">我的文章标题111</h1>
                         <ul class="post-meta mt-3 mb-4"><li class="d-inline-block mr-3"><span class="fas fa-clock text-primary"></span><a class="ml-1" href="../../../../../archive/2026/7/2026-7.html">8 July, 2026</a></li><li class="d-inline-block"><span class="fas fa-list-alt text-primary"></span><a class="ml-1" href="../../../../../category/1.html">未分类</a></li></ul>
-                        <div class="post-content mt-4">
-                            <h1 id="_1">我的示例</h1>
+                        <div class="post-content mt-4 font-secondary">
+                            <h1 class="h1 mb-3">我的示例</h1>
 <p>这是我的示例文章正文，支持 <strong>Markdown</strong> 语法。</p>
-<h2 id="_2">代码示例</h2>
-<pre class="codehilite"><code class="language-python">print(&quot;Hello, World!&quot;)
+<h2 class="h2 mb-3">代码示例</h2>
+<pre class="line-numbers" style="border-radius:8px;"><code class="language-python">print(&quot;Hello, World!&quot;)
 </code></pre>
-
-<h2 id="_3">列表</h2>
+<h2 class="h2 mb-3">列表</h2>
 <ul>
 <li>第一项</li>
 <li>第二项</li>
@@ -131,6 +115,10 @@
     <!-- All JS Files -->
     <script src="../../../../../plugins/jQuery/jquery.min.js"></script>
     <script src="../../../../../plugins/bootstrap/bootstrap.min.js"></script>
+
+    <!-- Prism Syntax Highlighting -->
+    <link rel="stylesheet" href="../../../../../css/prism.css">
+    <script src="../../../../../js/prism.js"></script>
 
     <!-- Main Script -->
     <script src="../../../../../js/script.js"></script>

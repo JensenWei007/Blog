@@ -5,10 +5,14 @@ from pathlib import Path
 # --- 路径 ---
 BLOG_ROOT = Path(__file__).resolve().parent.parent.parent  # ~/Blog
 ALL_JSON = BLOG_ROOT / "all.json"
+INDEX_JSON = BLOG_ROOT / "json" / "index.json"
 ARCHIVE_ROOT = BLOG_ROOT / "archive"
 CATEGORY_ROOT = BLOG_ROOT / "category"
 MD_DIR = BLOG_ROOT / "md"
 TEMPLATE_PATH = BLOG_ROOT / "template.html"
+
+# 首页 index.json 最多保留的文章数（新文章插入队首，超出则截尾）
+INDEX_MAX_SIZE = 6
 
 # --- 归档页面 JS 内容片段 ---
 ARCHIVE_ROOT_CONTENT = """\

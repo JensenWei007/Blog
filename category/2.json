@@ -1,13 +1,25 @@
 [
   {
-    "id": 1,
-    "title": "一篇新的测试文章",
-    "date": "6 July, 2026",
+    "id": 3,
+    "title": "测试index更新",
+    "date": "10 July, 2026",
     "dateLink": "../archive/2026/7/2026-7.html",
-    "category": "生活随笔",
+    "category": "测试",
     "categoryLink": "2.html",
-    "description": "这是通过新增模式添加的测试文章",
-    "link": "../archive/2026/7/6/1/1.html",
+    "description": "",
+    "link": "../archive/2026/7/10/3/3.html",
+    "image": "",
+    "imageAlt": ""
+  },
+  {
+    "id": 4,
+    "title": "图片测试文章",
+    "date": "8 July, 2026",
+    "dateLink": "../archive/2026/7/2026-7.html",
+    "category": "测试",
+    "categoryLink": "2.html",
+    "description": "测试图片处理",
+    "link": "../archive/2026/7/8/4/4.html",
     "image": "",
     "imageAlt": ""
   }

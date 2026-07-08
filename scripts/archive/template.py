@@ -88,11 +88,30 @@ def fill_template(template: str, title: str, meta: dict, body_html: str,
 
 def fill_archive_page(template: str, title: str, content_html: str,
                       output_dir: Path) -> str:
-    """用归档/分类页面数据填充模板。"""
+    """用归档/分类页面数据填充模板，并自动激活对应的导航项。"""
     base_path = os.path.relpath(BLOG_ROOT, output_dir)
+    if base_path != ".":
+        base_path += "/"
     content_html = content_html.replace("{{ base_path }}", base_path)
     html = template.replace("{{ title }}", title)
     html = html.replace("{{ image_block }}", "")
     html = html.replace("{{ meta_block }}", "")
     html = html.replace("{{ content }}", content_html)
-    return adjust_resource_paths(html, output_dir)
+    html = adjust_resource_paths(html, output_dir)
+
+    # 根据输出目录激活对应的导航项
+    from .config import ARCHIVE_ROOT, CATEGORY_ROOT
+    if str(output_dir).startswith(str(ARCHIVE_ROOT)):
+        html = re.sub(
+            r'<li class="nav-item ">(\s*<a[^>]*href="[^"]*archive/archive\.html"[^>]*>Archive</a>)',
+            r'<li class="nav-item active">\1',
+            html
+        )
+    elif str(output_dir).startswith(str(CATEGORY_ROOT)):
+        html = re.sub(
+            r'<li class="nav-item ">(\s*<a[^>]*href="[^"]*category\.html"[^>]*>Category</a>)',
+            r'<li class="nav-item active">\1',
+            html
+        )
+
+    return html

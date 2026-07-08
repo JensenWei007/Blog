@@ -83,27 +83,12 @@
             <!-- end of mobile-nav -->
 
             <div class="container py-4 my-5">
-                <div class="row">
-                    <div class="col-lg-5 col-md-8">
-                        <form class="search-form" action="#">
-                            <div class="input-group">
-                                <input type="search" class="form-control bg-transparent shadow-none rounded-0" placeholder="Search here">
-                                <div class="input-group-append">
-                                    <button class="btn" type="submit">
-                                        <span class="fas fa-search"></span>
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                
                 <div class="row justify-content-between">
                     <div class="col-lg-10">
                         {{ image_block }}
                         <h1 class="text-white add-letter-space mt-4">{{ title }}</h1>
                         {{ meta_block }}
-                        <div class="post-content mt-4">
+                        <div class="post-content mt-4 font-secondary">
                             {{ content }}
                         </div>
                     </div>
@@ -120,6 +105,10 @@
     <!-- All JS Files -->
     <script src="plugins/jQuery/jquery.min.js"></script>
     <script src="plugins/bootstrap/bootstrap.min.js"></script>
+
+    <!-- Prism Syntax Highlighting -->
+    <link rel="stylesheet" href="css/prism.css">
+    <script src="js/prism.js"></script>
 
     <!-- Main Script -->
     <script src="js/script.js"></script>

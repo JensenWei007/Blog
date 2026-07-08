@@ -17,7 +17,7 @@
     "date": "6 July, 2026",
     "dateLink": "2026-7.html",
     "category": "生活随笔",
-    "categoryLink": "../../../category/2.html",
+    "categoryLink": "../../../category/3.html",
     "description": "这是通过新增模式添加的测试文章",
     "link": "6/1/1.html",
     "image": "",
@@ -32,6 +32,30 @@
     "categoryLink": "../../../category/1.html",
     "description": "这是一篇示例文章，用于测试归档生成脚本",
     "link": "8/2/2.html",
+    "image": "",
+    "imageAlt": ""
+  },
+  {
+    "id": 3,
+    "title": "测试index更新",
+    "date": "10 July, 2026",
+    "dateLink": "2026-7.html",
+    "category": "测试",
+    "categoryLink": "../../../category/2.html",
+    "description": "",
+    "link": "10/3/3.html",
+    "image": "",
+    "imageAlt": ""
+  },
+  {
+    "id": 4,
+    "title": "图片测试文章",
+    "date": "8 July, 2026",
+    "dateLink": "2026-7.html",
+    "category": "测试",
+    "categoryLink": "../../../category/2.html",
+    "description": "测试图片处理",
+    "link": "8/4/4.html",
     "image": "",
     "imageAlt": ""
   }

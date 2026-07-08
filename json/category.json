@@ -13,8 +13,14 @@
   },
   {
     "id": 2,
+    "name": "测试",
+    "post_count": 2,
+    "link": "category/2.html"
+  },
+  {
+    "id": 3,
     "name": "生活随笔",
     "post_count": 1,
-    "link": "category/2.html"
+    "link": "category/3.html"
   }
 ]

@@ -95,7 +95,7 @@ def ensure_archive_pages(template: str, archive_data: dict) -> None:
     """生成各层级归档 HTML 页面（已存在则跳过）。"""
     root_page = ARCHIVE_ROOT / "archive.html"
     if not root_page.is_file():
-        html = fill_archive_page(template, "文章归档", ARCHIVE_ROOT_CONTENT, ARCHIVE_ROOT)
+        html = fill_archive_page(template, "Archive", ARCHIVE_ROOT_CONTENT, ARCHIVE_ROOT)
         root_page.parent.mkdir(parents=True, exist_ok=True)
         with open(root_page, "w", encoding="utf-8") as f:
             f.write(html)

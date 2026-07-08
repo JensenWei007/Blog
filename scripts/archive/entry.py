@@ -9,6 +9,30 @@ from .frontmatter import parse_front_matter, parse_date_to_archive_path
 from .template import fill_template
 
 
+def _style_content(html: str) -> str:
+    """对 markdown 生成的 HTML 做样式后处理：标题加 class，代码块适配 Prism。"""
+    import re
+
+    # 标题：<h1> → <h1 class="h1 mb-3">，依此类推
+    for level in range(1, 7):
+        html = re.sub(
+            rf"<h{level}>",
+            rf'<h{level} class="h{level} mb-3">',
+            html,
+        )
+
+    # 代码块：确保 <pre> 有 Prism 需要的 class
+    html = html.replace("<pre>", '<pre class="line-numbers" style="border-radius:8px;">')
+
+    # 表格：按 post-details.html 样式添加 Bootstrap 类
+    html = html.replace("<table>",
+                        '<table class="table table-bordered text-center text-white table-transparent">')
+    html = html.replace("<thead>", '<thead class="bg-dark">')
+    html = re.sub(r"<th>", r'<th class="h3" scope="col">', html)
+
+    return html
+
+
 def compute_entry_links(entry: dict, cat_id_map: dict) -> None:
     """根据条目的日期和分类，自动设置 link / dateLink / categoryLink / imageLink。"""
     from .frontmatter import parse_date_to_archive_path
@@ -97,8 +121,9 @@ def process_entry(entry: dict, template: str, dry_run: bool = False) -> str:
     }
 
     body_html = markdown.markdown(
-        body, extensions=["fenced_code", "codehilite", "tables", "toc"]
+        body, extensions=["fenced_code", "tables"]
     )
+    body_html = _style_content(body_html)
     html_content = fill_template(template, title, render_meta, body_html,
                                  archive_dir, links)
 

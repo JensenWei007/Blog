@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "title": "一篇新的测试文章",
+    "date": "6 July, 2026",
+    "dateLink": "../archive/2026/7/2026-7.html",
+    "category": "生活随笔",
+    "categoryLink": "3.html",
+    "description": "这是通过新增模式添加的测试文章",
+    "link": "../archive/2026/7/6/1/1.html",
+    "image": "",
+    "imageAlt": ""
+  }
+]
